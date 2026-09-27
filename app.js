@@ -4,6 +4,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 const port=process.env.PORT||3000;
 
+app.get('/hello', (req, res) => {
+    res.send('Hello');
+});
 
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`);
